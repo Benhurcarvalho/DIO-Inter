@@ -57,3 +57,36 @@ const imc = (peso, altura) => {
 }
 
 // console.log(imc(68,1.65))
+
+// 3 Elabore um algorítimo que calculer o que deve ser pago por um produto, considerando 
+// o preço normal de etiqueta e a escolha da opção de pagamento.
+// Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhido e 
+// efetuar o cálculo.
+
+//     código para condição de pagamento:
+//     - à vista no débito - 10% de desconto; 1
+//     - à vista no dinheiro ou no pix - 15% de desconto; 2
+//     - em 2x - preço da etiqueta; 3
+//     - acima de 2x - 10% de juros. 4
+
+function formaDePagamento (valor, opc) {
+    let valorFinal = 0;
+
+    if (opc === 1) {
+        valorFinal = valor - valor * 0.1;
+    }
+    else if (opc === 2) {
+        valorFinal = valor - valor * 0.15;
+    }
+    else if (opc === 3) {
+        valorFinal = valor;
+    }
+    else {
+        valorFinal = valor * 1.1;
+    }
+
+    return valorFinal.toFixed(2)
+}
+
+// console.log(formaDePagamento(100, 4))
+
