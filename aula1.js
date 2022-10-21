@@ -11,7 +11,7 @@
 const fuelPrice = 5.79;
 const priceKm = 10;
 const distanceKm = 193;
-function valorGasto () {
+function fValorGasto () {
 
 const listrosGasto = distanceKm / priceKm;
 const valorGasto = listrosGasto * fuelPrice;
@@ -19,5 +19,4 @@ return valorGasto.toFixed(2)
 }
 
 
-console.log(valorGasto());
-
+console.log(fValorGasto());
